@@ -12,3 +12,5 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 COPY cmd-tool/ /app/
+RUN chmod +x /app/hook.sh
+ENTRYPOINT ["/app/hook.sh"]

@@ -1,5 +1,4 @@
 ---
----
 #Post-upgrade Job Role
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -21,5 +20,6 @@ subjects:
   name: default
   namespace: default
 roleRef:
+  apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: post-install-role
